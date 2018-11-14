@@ -1,0 +1,42 @@
+" Jamie Bailey vimrc configuration
+
+" core settings ---------------------------------
+" compatibility:
+set nocompatible
+
+" temp files:
+set nobackup
+set nowritebackup
+set noswapfile
+
+" display:
+syntax enable
+set nowrap
+set number
+set background=dark
+if has('unix')
+    set termguicolors
+endif
+
+" typing:
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+
+" windows settings ------------------------------
+if has("win32")
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+endif
+
+" vim-plug --------------------------------------
+if has("unix")
+    call plug#begin('~/.vim/plugged')
+elseif has("win32")
+    call plug#begin('~/vimfiles/plugged')
+endif
+Plug 'vim-syntastic/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'jiangmiao/auto-pairs'
+call plug#end()
