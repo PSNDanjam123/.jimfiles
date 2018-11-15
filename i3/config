@@ -169,6 +169,9 @@ bar {
 
 # Jamie Bailey custom bindings --------------------------------------------------------------------
 
+# Run Init
+exec --no-startup-id sh ~/.i3/scripts/init.sh
+
 # Launch Google Chrome
 bindsym Mod1+g exec "google-chrome"
 bindsym Mod1+Shift+g exec "google-chrome --incognito"
