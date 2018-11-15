@@ -33,7 +33,6 @@ fi
 # Setup Vim -------------------------------------
 if ! [ -x "$(command -v vim)" ]; then
     echo 'Warning: vim is not installed, skipping...';
-    exit 1
 else
     echo 'Setting up Vim...';
     mkdir -p $VIMPATH;
