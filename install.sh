@@ -5,26 +5,42 @@ SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P  )"    # .jimfiles path
 VIMPATH=$HOME/.vim
 I3PATH=$HOME/.i3
 
+# Install Requirements --------------------------
+if [ -x "$(command -v apt-get)" ]; then             # apt-get
+    if ! [ -x "$(command -v git)" ]; then
+        sudo apt-get install git -y;
+    fi
+    if ! [ -x "$(command -v curl)" ]; then
+        sudo apt-get install curl -y;
+    fi
+    if ! [ -x "$(command -v vim)" ]; then
+        sudo apt-get install vim -y;
+    fi
+    if ! [ -x "$(command -v i3)" ]; then
+        sudo apt-get install i3 -y;
+    fi
+fi
+
 # Verify Requirements ---------------------------
 if ! [ -x "$(command -v git)" ]; then
-	echo 'Error: git is not installed.';
-	exit 1
+    echo 'Error: git is not installed.';
+    exit 1
 elif ! [ -x "$(command -v curl)" ]; then
-	echo 'Error: curl is not installed.';
-	exit 1
+    echo 'Error: curl is not installed.';
+    exit 1
 fi
 
 # Setup Vim -------------------------------------
 if ! [ -x "$(command -v vim)" ]; then
-	echo 'Warning: vim is not installed, skipping...';
-	exit 1
+    echo 'Warning: vim is not installed, skipping...';
+    exit 1
 else
-	echo 'Setting up Vim...';
-	mkdir -p $VIMPATH;
+    echo 'Setting up Vim...';
+    mkdir -p $VIMPATH;
 
-	if [ -e $VIMPATH/vimrc ]; then
-		rm $VIMPATH/vimrc;
-	fi;
+    if [ -e $VIMPATH/vimrc ]; then
+        rm $VIMPATH/vimrc;
+    fi;
 
     ln -s $SCRIPTPATH/vim/vimrc $VIMPATH/vimrc;
 
