@@ -63,6 +63,15 @@ else
     fi
 
     ln -s $SCRIPTPATH/i3/config $I3PATH/config;
+
+    mkdir -p $I3PATH/scripts;
+
+    if [ -e $I3PATH/scripts/init.sh ]; then
+        rm $I3PATH/scripts/init.sh;
+    fi
+
+    ln -s $SCRIPTPATH/i3/scripts/init.sh $I3PATH/scripts/init.sh;
+
 fi
 
 echo 'Setup complete.';
