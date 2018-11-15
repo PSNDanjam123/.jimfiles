@@ -43,8 +43,10 @@ else
 
     ln -s $SCRIPTPATH/vim/vimrc $VIMPATH/vimrc;
 
-    curl -fLo $VIMPATH/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ;
+    if ! [ -e $VIMPATH/autoload/plug.vim ]; then
+        curl -fLo $VIMPATH/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ;
+    fi
 
     vim +PlugInstall +qall;
 fi
