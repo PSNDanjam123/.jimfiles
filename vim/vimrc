@@ -14,7 +14,7 @@ syntax enable
 set nowrap
 set number
 set background=dark
-if has('unix')
+if has('unix') && exists('+termguicolors')
     set termguicolors
 endif
 
