@@ -56,6 +56,8 @@ else
 
     ln -sf $SCRIPTPATH/i3/config $I3PATH/config;
 
+    ln -sf $SCRIPTPATH/i3/status.conf $I3PATH/status.conf;
+
     mkdir -p $I3PATH/scripts;
 
     ln -sf $SCRIPTPATH/i3/scripts/init.sh $I3PATH/scripts/init.sh;
