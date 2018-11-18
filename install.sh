@@ -37,11 +37,7 @@ else
     echo 'Setting up Vim...';
     mkdir -p $VIMPATH;
 
-    if [ -e $VIMPATH/vimrc ]; then
-        rm $VIMPATH/vimrc;
-    fi;
-
-    ln -s $SCRIPTPATH/vim/vimrc $VIMPATH/vimrc;
+    ln -sf $SCRIPTPATH/vim/vimrc $VIMPATH/vimrc;
 
     if ! [ -e $VIMPATH/autoload/plug.vim ]; then
         curl -fLo $VIMPATH/autoload/plug.vim --create-dirs \
@@ -58,19 +54,11 @@ else
     echo 'Setting up i3...';
     mkdir -p $I3PATH;
 
-    if [ -e $I3PATH/config ]; then
-        rm $I3PATH/config;
-    fi
-
-    ln -s $SCRIPTPATH/i3/config $I3PATH/config;
+    ln -sf $SCRIPTPATH/i3/config $I3PATH/config;
 
     mkdir -p $I3PATH/scripts;
 
-    if [ -e $I3PATH/scripts/init.sh ]; then
-        rm $I3PATH/scripts/init.sh;
-    fi
-
-    ln -s $SCRIPTPATH/i3/scripts/init.sh $I3PATH/scripts/init.sh;
+    ln -sf $SCRIPTPATH/i3/scripts/init.sh $I3PATH/scripts/init.sh;
 
 fi
 
