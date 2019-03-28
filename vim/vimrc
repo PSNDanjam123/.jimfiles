@@ -39,4 +39,5 @@ endif
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
+Plug 'avakhov/vim-yaml'
 call plug#end()
