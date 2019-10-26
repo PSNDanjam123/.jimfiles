@@ -64,7 +64,7 @@ else
 
     echo 'Making i3 sexy...';
     sudo apt-get install nitrogen xcompmgr -y;
-    nitrogen --random --save --set-auto $SCRIPTPATH/wallpapers;
+    nitrogen --random --save --set-zoom-fill $SCRIPTPATH/wallpapers;
 
 fi
 
