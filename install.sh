@@ -28,9 +28,6 @@ if ! [ -x "$(command -v git)" ]; then
 elif ! [ -x "$(command -v curl)" ]; then
     echo 'Error: curl is not installed.';
     exit 1
-elif ! [ -x "$(command -v go)" ]; then
-    echo 'Error: go is not installed.';
-    exit 1
 fi
 
 # Setup Vim -------------------------------------
