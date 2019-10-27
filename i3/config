@@ -181,3 +181,5 @@ exec --no-startup-id feh --recursive --randomize --bg-fill ~/.i3/wallpapers
 
 # xcompmgr
 exec --no-startup-id xcompmgr
+
+new_window pixel
