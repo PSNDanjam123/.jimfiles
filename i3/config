@@ -164,7 +164,10 @@ bindsym Mod1+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status -c ~/.i3/status.conf
+    status_command i3status -c ~/.i3/status.conf
+    colors {
+        background #22222
+    }
 }
 
 # Jamie Bailey custom bindings --------------------------------------------------------------------
@@ -181,5 +184,14 @@ exec --no-startup-id feh --recursive --randomize --bg-fill ~/.i3/wallpapers
 
 # xcompmgr
 exec --no-startup-id xcompmgr
-
 new_window pixel
+
+# Colours
+# class                 border  backgr. text    indicator child_border
+client.focused          #4C7899 #285577 #ffffff #2e9ef4   #CCCCCC
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
