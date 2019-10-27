@@ -63,8 +63,8 @@ else
     ln -sf $SCRIPTPATH/i3/scripts/init.sh $I3PATH/scripts/init.sh;
 
     echo 'Making i3 sexy...';
-    sudo apt-get install nitrogen xcompmgr -y;
-    nitrogen --random --save --set-zoom-fill $SCRIPTPATH/wallpapers;
+    ln -sf $SCRIPTPATH/i3/wallpapers $I3PATH/wallpapers;
+    sudo apt-get install feh xcompmgr -y;
 
 fi
 

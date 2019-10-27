@@ -177,7 +177,7 @@ bindsym Mod1+g exec "google-chrome"
 bindsym Mod1+Shift+g exec "google-chrome --incognito"
 
 # Background
-exec --no-startup-id nitrogen --restore &
+exec --no-startup-id feh --recursive --randomize --bg-fill ~/.i3/wallpapers
 
 # xcompmgr
 exec --no-startup-id xcompmgr
