@@ -63,7 +63,7 @@ else
     ln -sf $SCRIPTPATH/i3/scripts/init.sh $I3PATH/scripts/init.sh;
 
     echo 'Making i3 sexy...';
-    ln -sf $SCRIPTPATH/i3/wallpapers $I3PATH/wallpapers;
+    ln -sTf $SCRIPTPATH/i3/wallpapers $I3PATH/wallpapers;
     sudo apt-get install feh xcompmgr -y;
 
 fi
